@@ -1,0 +1,65 @@
+{
+  "name": "@mantis3d/dsh-context-title",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Session-title and sidebar-row context-window usage for DeepSeek Harness: ring plus percentage, tiered colors, hover breakdown, and a settings page.",
+  "icon": "icon.svg",
+  "author": "mantis3d",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mantis3d/dsh-context-title.git"
+  },
+  "homepage": "https://github.com/mantis3d/dsh-context-title",
+  "bugs": {
+    "url": "https://github.com/mantis3d/dsh-context-title/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "context",
+    "token",
+    "ui",
+    "session"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/en.json",
+    "locale/zh.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.2": "compatible"
+      }
+    }
+  }
+}

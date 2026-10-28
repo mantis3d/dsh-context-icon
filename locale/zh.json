@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "会话标题上下文用量",
+    "description": "在会话标题旁与侧栏会话行显示上下文窗口占用百分比，悬停查看 token 与构成明细。"
+  },
+  "badge": {
+    "aria": "上下文已用 {percent}%"
+  },
+  "tip": {
+    "title": "上下文",
+    "system": "系统提示词",
+    "tools": "工具定义",
+    "messages": "对话消息"
+  },
+  "hover": {
+    "label": "上下文"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Session Title Context Usage",
+    "description": "Shows context-window occupancy beside the session title and on sidebar session rows, with token and composition details on hover."
+  },
+  "badge": {
+    "aria": "Context used {percent}%"
+  },
+  "tip": {
+    "title": "Context",
+    "system": "System prompt",
+    "tools": "Tool definitions",
+    "messages": "Messages"
+  },
+  "hover": {
+    "label": "Context"
+  }
+}
