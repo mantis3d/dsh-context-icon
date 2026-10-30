@@ -1,5 +1,5 @@
 {
-  "name": "@mantis3d/dsh-context-title",
+  "name": "@mantis3d/dsh-context-icon",
   "version": "0.3.0",
   "private": true,
   "type": "module",
@@ -9,11 +9,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mantis3d/dsh-context-title.git"
+    "url": "git+https://github.com/mantis3d/dsh-context-icon.git"
   },
-  "homepage": "https://github.com/mantis3d/dsh-context-title",
+  "homepage": "https://github.com/mantis3d/dsh-context-icon",
   "bugs": {
-    "url": "https://github.com/mantis3d/dsh-context-title/issues"
+    "url": "https://github.com/mantis3d/dsh-context-icon/issues"
   },
   "keywords": [
     "deepseek-harness",

@@ -1,4 +1,4 @@
-# dsh-context-title
+# dsh-context-icon
 
 > 在会话标题旁和侧栏会话行上显示**上下文窗口用量** · Context-window usage beside DeepSeek Harness session titles and on sidebar session rows.
 
@@ -26,10 +26,10 @@ DSH 默认只在输入框附近显示上下文占用——切到别的会话就�
 设置 → 插件 → 市场 → 搜索 `上下文用量` 安装，然后完全退出并重开 DSH。
 
 **方式二：直接从 GitHub 源安装**
-对该 DSH 会话说「安装 `github:mantis3d/dsh-context-title` 这个插件」，或让 Agent 调用 `plugin_manager` 的 `install_bundle`，安装目标填：
+对该 DSH 会话说「安装 `github:mantis3d/dsh-context-icon` 这个插件」，或让 Agent 调用 `plugin_manager` 的 `install_bundle`，安装目标填：
 
 ```
-github:mantis3d/dsh-context-title
+github:mantis3d/dsh-context-icon
 ```
 
 安装完成后完全退出并重新启动 DSH。
@@ -51,7 +51,7 @@ github:mantis3d/dsh-context-title
 | 配色 | 四档 / 两档 / 中性 |
 | 精度 | 整数百分比 / 一位小数 |
 
-偏好保存在浏览器 `localStorage` 的 `dsh-context-title:config` 键下。
+偏好保存在浏览器 `localStorage` 的 `dsh-context-icon:config` 键下。
 
 ## 已知限制
 
@@ -89,4 +89,4 @@ node --check client.js
 
 A DeepSeek Harness plugin that shows context-window occupancy next to the session title and on sidebar session rows: a ring plus percentage, a hover tooltip with `≈used / window` and the system / tools / messages breakdown, four-tier colors at 50 / 80 / 95%, and a settings page (Settings → Context usage) to combine the header form, seat, sidebar mark, hover detail, visibility rule, palette and precision. Preferences live in `localStorage`; the plugin makes no network requests and reads only the official `contextPressure` / `contextBreakdown` session projections.
 
-Install from source: ask DSH to install `github:mantis3d/dsh-context-title`, then restart DSH completely (the Host caches client bundles at activation).
+Install from source: ask DSH to install `github:mantis3d/dsh-context-icon`, then restart DSH completely (the Host caches client bundles at activation).

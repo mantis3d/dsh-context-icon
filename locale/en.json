@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Session Title Context Usage",
+    "title": "Context Usage Icon",
     "description": "Shows context-window occupancy beside the session title and on sidebar session rows, with token and composition details on hover."
   },
   "badge": {

@@ -1,5 +1,5 @@
 /**
- * Client half of `@mantis3d/dsh-context-title`.
+ * Client half of `@mantis3d/dsh-context-icon`.
  *
  * Fills four seats with the same reading:
  *   • `conversation.session.header.actions` / `.utilities` — the session badge
@@ -21,14 +21,14 @@
  * this machine and browser.
  */
 window.__ModuleLoader__.load({
-  id: '@mantis3d/dsh-context-title',
+  id: '@mantis3d/dsh-context-icon',
   factory(require) {
     const React = require('react')
     const h = React.createElement
 
     const NS = 'context-title'
-    const STYLE_ID = '@mantis3d/dsh-context-title/styles'
-    const CONFIG_KEY = 'dsh-context-title:config'
+    const STYLE_ID = '@mantis3d/dsh-context-icon/styles'
+    const CONFIG_KEY = 'dsh-context-icon:config'
 
     // Dictionaries are flat, dotted-key maps (see @deepseek-ai/dsh-client-locale):
     // `t('badge.aria')` resolves the literal key and replaces `{name}` holes.
@@ -40,7 +40,7 @@ window.__ModuleLoader__.load({
       'tip.messages': '对话消息',
       'hover.label': '上下文',
       'nav': '上下文用量',
-      'page.title': '会话标题上下文用量',
+      'page.title': '上下文用量图标',
       'page.desc': '选择标题旁与侧栏行显示上下文占用的方式。修改立即生效，保存在本机浏览器。',
       'page.preview': '预览',
       'legend.title': '四档配色',
@@ -83,7 +83,7 @@ window.__ModuleLoader__.load({
       'tip.messages': 'Messages',
       'hover.label': 'Context',
       'nav': 'Context usage',
-      'page.title': 'Session title context usage',
+      'page.title': 'Context usage icon',
       'page.desc': 'Choose how context occupancy is shown beside the title and on sidebar rows. Changes apply immediately and are stored in this browser.',
       'page.preview': 'Preview',
       'legend.title': 'Tiers',
@@ -636,7 +636,7 @@ window.__ModuleLoader__.load({
           const existing = document.querySelector('style[data-plugin-css="' + STYLE_ID + '"]')
           if (existing !== null) return () => {}
           const style = document.createElement('style')
-          style.dataset.plugin = '@mantis3d/dsh-context-title'
+          style.dataset.plugin = '@mantis3d/dsh-context-icon'
           style.dataset.pluginCss = STYLE_ID
           style.textContent = CSS
           document.head.appendChild(style)
