@@ -1,5 +1,5 @@
 # Loads the package's Host half (an inert Cordis plugin) and its ./client browser
 # half, which fills the session-title and sidebar-row seats.
 - insert:
-    - id: context-title
+    - id: context-icon
       name: '@mantis3d/dsh-context-icon'
