@@ -43,6 +43,7 @@ window.__ModuleLoader__.load({
       'page.title': '会话标题上下文用量',
       'page.desc': '选择标题旁与侧栏行显示上下文占用的方式。修改立即生效，保存在本机浏览器。',
       'page.preview': '预览',
+      'legend.title': '四档配色',
       'group.form': '标题旁显示什么',
       'group.seat': '放在哪里',
       'group.rail': '侧栏会话行行首',
@@ -85,6 +86,7 @@ window.__ModuleLoader__.load({
       'page.title': 'Session title context usage',
       'page.desc': 'Choose how context occupancy is shown beside the title and on sidebar rows. Changes apply immediately and are stored in this browser.',
       'page.preview': 'Preview',
+      'legend.title': 'Tiers',
       'group.form': 'What the badge shows',
       'group.seat': 'Where it sits',
       'group.rail': 'Sidebar row mark',
@@ -129,10 +131,10 @@ window.__ModuleLoader__.load({
       '.ct-fill{fill:none;stroke:var(--ct-color,var(--dsw-alias-brand-primary));stroke-linecap:round;',
       'transition:stroke-dasharray .3s ease}',
       '.ct-badge-text{color:var(--ct-color,var(--dsw-alias-label-secondary))}',
-      '.ct-ok{--ct-color:var(--dsw-alias-state-success-primary)}',
-      '.ct-info{--ct-color:var(--dsw-alias-brand-primary)}',
-      '.ct-warn{--ct-color:var(--dsw-alias-state-warn-primary)}',
-      '.ct-error{--ct-color:var(--dsw-alias-state-error-primary)}',
+      '.ct-ok{--ct-color:var(--dsw-alias-state-success-primary,#15803d)}',
+      '.ct-info{--ct-color:var(--dsw-alias-button-info-fill,#4176e6)}',
+      '.ct-warn{--ct-color:var(--dsw-alias-state-warn-primary,#d97706)}',
+      '.ct-error{--ct-color:var(--dsw-alias-state-error-primary,#d92d20)}',
       '.ct-dim{--ct-color:var(--dsw-alias-border-l2)}',
       '.ct-dim .ct-badge-text{color:var(--dsw-alias-label-secondary)}',
       '.ct-bar{display:inline-flex;align-items:center;flex:none;width:44px;height:4px;border-radius:2px;',
@@ -179,6 +181,11 @@ window.__ModuleLoader__.load({
       'border:1px dashed var(--dsw-alias-border-l1);border-radius:8px;',
       'color:var(--dsw-alias-label-secondary);font-size:12px}',
       '.ct-set-preview-tag{font-size:11px;color:var(--dsw-alias-label-secondary)}',
+      '.ct-legend{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:2px 0;',
+      'font-size:11px;line-height:16px;color:var(--dsw-alias-label-secondary)}',
+      '.ct-legend-item{display:inline-flex;align-items:center;gap:5px}',
+      '.ct-legend-dot{display:inline-block;width:8px;height:8px;border-radius:50%;',
+      'background:var(--ct-color,var(--dsw-alias-border-l2))}',
     ].join('')
 
     // ---- preferences -------------------------------------------------------
@@ -532,6 +539,19 @@ window.__ModuleLoader__.load({
           { className: 'ct-set-preview' },
           h('span', { className: 'ct-set-preview-tag' }, t('page.preview')),
           h(HeaderBadge, { info: sample, cfg: { ...cfg, visibility: 'always' }, t, size: 14 }),
+        ),
+        h(
+          'div',
+          { className: 'ct-legend' },
+          h('span', { className: 'ct-set-preview-tag' }, t('legend.title')),
+          ...[35, 65, 88, 97].map((percent) =>
+            h(
+              'span',
+              { key: percent, className: 'ct-legend-item' },
+              h('span', { className: 'ct-legend-dot' + toneClass(percent, { tone: 'four' }) }),
+              percent + '%',
+            ),
+          ),
         ),
         h(ChoiceGroup, {
           label: t('group.form'),
